@@ -26,13 +26,58 @@
             border: 0;
         }
 
-        
-        
+        #popup {
+            width: 300px;
+            height: 300px;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            background-color: gray;
+            z-index: 1;
+            text-align: center;
+        }
+
+        #popup:before {
+            content: '';
+            display: block;
+            width: 280px;
+            height: 280px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #popup ul {
+            width: 210px;
+            height: 170px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #popup ul li{
+            font-family: 'NanumGothic';
+        }
+        #popup div{
+            position: absolute;
+            right: 24px;
+            top: 20px;
+            font-family: 'NanumGothic';
+            color: gray;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-
+    <div id="popup">
+        <ul>
+            <li>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.<br/><br/> 홈페이지의 일부 내용과 이미지 등은 그 출처가 따로 있음을 밝힙니다.<br/><br/>감사합니다.</li>
+        </ul>
+        <div id="popupclose">X</div>
+    </div>
     <header class="wrap">
         <div class="all_wrap">
             <div id="logo"><a href="">Andante</a></div>
@@ -110,7 +155,7 @@
     <div id="group_4" class="wrap">
         <div>
             <div>
-               <div id="group_4_title"><a href="">RESERVATION</a></div>
+                <div id="group_4_title"><a href="">RESERVATION</a></div>
                 <p>예약하기</p>
             </div>
         </div>
@@ -145,13 +190,30 @@
     </div>
     <footer class="wrap">
         <div>
-          <a href=""><i class="fab fa-youtube"></i></a>
-           <a href=""><i class="fab fa-google-plus"></i></a>
-           <a href=""><i class="fab fa-instagram"></i></a> 
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-google-plus"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
         </div>
-        <ul><li>안단테(주) 부산광역시 북구 OOO 전화번호: 051-000-0000 이메일: OOO@gmail.com</li></ul>
-        
+        <ul>
+            <li>안단테(주) 부산광역시 북구 OOO 전화번호: 051-000-0000 이메일: OOO@gmail.com</li>
+        </ul>
+
     </footer>
     <script src="https://kit.fontawesome.com/3903d10c0e.js"></script>
+    <script>
+       window.onload = function(){
+           const popup = document.getElementById('popup');
+            const popupClose = document.getElementById('popupclose');
+            
+            popupClose.addEventListener('click',function(){
+                popup.style.display = 'none';
+            });
+       }
+            
+            
+            
+        
+    
+    </script>
 </body>
 </html>
