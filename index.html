@@ -1,12 +1,14 @@
 <!doctype html>
 
 <html lang="ko">
-	<head>
+
+<head>
     <title>Page Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <link href="css/font.css" type="text/css" rel="stylesheet" />
     <link href="css/andante_pc.css" type="text/css" rel="stylesheet" />
+    <link href="css/markup_popup.css" type="text/css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -26,48 +28,8 @@
             border: 0;
         }
 
-        #popup {
-            width: 300px;
-            height: 300px;
-            position: fixed;
-            top: 50px;
-            left: 50px;
-            background-color: gray;
-            z-index: 1;
-            text-align: center;
-        }
+        
 
-        #popup:before {
-            content: '';
-            display: block;
-            width: 280px;
-            height: 280px;
-            background-color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #popup ul {
-            width: 210px;
-            height: 170px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #popup ul li{
-            font-family: 'NanumGothic';
-        }
-        #popup div{
-            position: absolute;
-            right: 24px;
-            top: 20px;
-            font-family: 'NanumGothic';
-            color: gray;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -76,7 +38,19 @@
         <ul>
             <li>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다.<br/><br/> 홈페이지의 일부 내용과 이미지 등은 그 출처가 따로 있음을 밝힙니다.<br/><br/>감사합니다.</li>
         </ul>
+
         <div id="popupclose">X</div>
+        <p>
+            <a href="http://validator.kldp.org/check?uri=referer" onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+      src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+        </p>
+        <p>
+            <a href="http://css-validator.kldp.org/check/referer">
+        <img style="border:0;width:80px;height:15px"
+            src="//css-validator.kldp.org/images/validate/css-blue"
+            alt="올바른 CSS입니다!" />
+    </a>
+        </p>
     </div>
     <header class="wrap">
         <div class="all_wrap">
@@ -201,19 +175,16 @@
     </footer>
     <script src="https://kit.fontawesome.com/3903d10c0e.js"></script>
     <script>
-       window.onload = function(){
-           const popup = document.getElementById('popup');
+        window.onload = function() {
+            const popup = document.getElementById('popup');
             const popupClose = document.getElementById('popupclose');
-            
-            popupClose.addEventListener('click',function(){
+
+            popupClose.addEventListener('click', function() {
                 popup.style.display = 'none';
             });
-       }
-            
-            
-            
-        
-    
+        }
+
     </script>
 </body>
+
 </html>

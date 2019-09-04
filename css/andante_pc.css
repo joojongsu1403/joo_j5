@@ -363,7 +363,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        border: 2px solid #a9a9a9;
+        border: 2px solid #c02323;
         line-height: 58px;
         transition-duration: .4s;
     }

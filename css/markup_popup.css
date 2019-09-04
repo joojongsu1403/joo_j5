@@ -1,0 +1,55 @@
+#popup {
+            width: 300px;
+            height: 400px;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            background-color: gray;
+            z-index: 1;
+            text-align: center;
+        }
+
+        #popup:before {
+            content: '';
+            display: block;
+            width: 280px;
+            height: 380px;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #popup ul {
+            width: 210px;
+            height: 170px;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #popup ul li {
+            font-family: 'NanumGothic';
+        }
+
+        #popup div {
+            position: absolute;
+            right: 24px;
+            top: 20px;
+            font-family: 'NanumGothic';
+            color: gray;
+            cursor: pointer;
+        }
+
+        #popup>p {
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #popup>p:nth-child(4) {
+            top: 310px;
+        }
