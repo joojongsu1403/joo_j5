@@ -33,7 +33,9 @@
         #popup ul li {
             font-family: 'NanumGothic';
         }
-
+        #popup ul li>span{
+            color: red;
+        }
         #popup div {
             position: absolute;
             right: 24px;
