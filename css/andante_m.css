@@ -1,4 +1,4 @@
-@media all and (min-width:1280px) {
+@media all and (max-width:759px) {
 
     body {
         width: 100%;
@@ -7,14 +7,14 @@
     }
 
     .wrap {
-        width: 1280px;
+        width: 100%;
         margin: 0 auto;
         position: relative;
     }
     /*1. 타이틀 시작*/
     header {
-        width: 1280px;
-        height: 650px;
+        width: 100%;
+        height: 333.5px;
         background-color: aquamarine;
         margin: 0 auto;
         background-image: url(../header/header_bg.jpg);
@@ -26,7 +26,7 @@
     #logo a {
         font-family: 'Ananda';
         font-weight: 600;
-        font-size: 34px;
+        font-size: 17px;
         color: #fdfdfd;
         float: left;
         margin-left: 50px;
@@ -43,6 +43,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        display: none;
     }
 
     #menu li a {
@@ -58,7 +59,7 @@
         font-family: 'Ananda';
         color: #c02323;
         font-weight: 600;
-        font-size: 126px;
+        font-size: 63px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -68,9 +69,9 @@
     #sub_title {
         font-family: 'NanumGothic';
         color: #24292d;
-        font-size: 26px;
+        font-size: 13px;
         position: absolute;
-        top: 420px;
+        top: 210px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -80,83 +81,93 @@
         position: absolute;
         bottom: 40px;
         left: 40px;
+        display: none;
     }
     /* 1. 타이틀 끝*/
     /*2. group_1 인사말 시작*/
     #group_1 {
-        width: 1280px;
-        height: 560px;
+        width: 375px;
+        height: 333.5px;
         background-color: #fdfdfd;
 
     }
     #group_1 ul {
-        width: 500px;
-        height: 350px;
+        width: 100%;
+        height: 333.5px;
         position: absolute;
-
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        padding-top: 44px;
+        box-sizing: border-box;
     }
     #group_1 li {
-        margin-bottom: 46px;
+        margin-bottom: 23px;
     }
     #group_1 li:nth-child(1) {
         color: #a9a9a9;
         font-family: 'Ananda';
-        font-size: 26px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
     #group_1 li:nth-child(2) {
         color: #c02323;
-        font-size: 46px;
+        font-size: 32px;
         font-family: 'NanumGothic';
         font-weight: 600;
     }
     #group_1 li:nth-child(2) span {
         color: #a9a9a9;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 300;
         position: relative;
-        top: -18px;
-        left: -20px;
+        top: -12px;
+        left: -10px;
     }
     #group_1 li:nth-child(3) {
         color: #a9a9a9;
         font-family: 'NanumGothic';
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 14px;
+        line-height: 24px;
     }
     #group_1 li:nth-child(4) {
         width: auto;
         height: 30px;
         color: #c02323;
-        font-size: 26px;
+        font-size: 18px;
         font-family: 'NanumGothic';
 
     }
     #group_1 li:nth-child(4) span {
         color: #24292d;
-        font-size: 20px;
-        margin-right: 30px;
+        font-size: 14px;
+        margin-right: 15px;
     }
 
 
     /*2. group_1 인사말 끝*/
     /*3. group_2 요리 시작*/
     #group_2 {
-        width: 1280px;
-        height: 400px;
+        width: 100%;
+        height: 610px;
         background-color: #fdfdfd;
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
+        flex-direction: column;
     }
     .group_2_img {
+        width: 100%;
+        height: 200px;
         position: relative;
         background-color: #c02323;
         overflow: hidden;
+    }
+    .group_2_img>img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -60px;
     }
     .group_2_img:hover img {
         opacity: .3;
@@ -185,17 +196,17 @@
     /*3. group_2 요리 끝*/
     /*4. group_3 서비스 시작*/
     #group_3 {
-        width: 1280px;
-        height: 520px;
+        width: 100%;
+        height: 667px;
     }
     #group_3 > div:nth-child(1) {
         width: 270px;
         height: auto;
         text-align: center;
         position: absolute;
-        top: 100px;
+        top: 80px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%);    
     }
     #group_3_title {
         font-size: 34px;
@@ -212,32 +223,41 @@
         margin-top: 6px;
     }
     #group_3 > div:nth-child(2) {
-        width: 750px;
-        height: 200px;
-        position: absolute;
-        top: 230px;
+        width: 300px;
+        height: 400px;
+        position: relative;
+        top: 200px;
         left: 50%;
         transform: translateX(-50%);
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        display: block;
+        overflow:hidden;
     }
     .group_3_icon {
-        width: 140px;
-        height: 100%;
+        width: 120px;
+        height: 140px;
         text-align: center;
+        float: left;
+        padding: 0px 15px;
+    }
+    .group_3_icon:nth-child(3),.group_3_icon:nth-child(4){
+        padding-top: 60px;
     }
     .group_3_icon > .icon {
-        width: 110px;
-        height: 110px;
+        width: 80px;
+        height: 90px;
         margin: 0 auto;
+    }
+    
+    .group_3_icon > .icon > img{
+        width: 100%;
+        height: auto;
     }
     .group_3_icon li:nth-child(2) {
         color: #c02323;
         font-family: 'NanumGothic';
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
-        margin-top: 4px;
+        margin-top: 0px;
         margin-bottom: 10px;
     }
     .group_3_icon li:nth-child(3) {
@@ -249,11 +269,11 @@
     /*4. group_3 서비스 끝*/
     /*5. group_4 예약 시작*/
     #group_4 {
-        width: 1280px;
+        width: 100%;
         height: 440px;
     }
     #group_4 > div {
-        width: 350px;
+        width: 300px;
         height: 180px;
         background-color: #fdfdfd;
         position: absolute;
@@ -265,7 +285,7 @@
     #group_4 > div:before {
         content: '';
         display: block;
-        width: 334px;
+        width: 284px;
         height: 164px;
         border: 2px solid #24292d;
         opacity: .2;
@@ -300,39 +320,48 @@
         font-family: 'NanumGothic';
         margin-top: 6px;
     }
-
+    #group_4 >img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
 
 
 
     /*5. group_4 예약 끝*/
     /*6. group_5 메뉴 시작*/
     #group_5 {
-        width: 1280px;
-        height: 560px;
+        width: 100%;
+        height: 621px;
         background-color: #fdfdfd;
     }
 
     #group_5 > div:nth-child(1) {
-        width: 354px;
-        height: 354px;
-        position: absolute;
-        top: 50%;
-        left: 296px;
-        transform: translateY(-50%);
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 6px;
+        background-color: red;
     }
-    #group_5 > div:nth-child(1) >img:nth-child(2){
+    #group_5 > div:nth-child(1) >img:nth-child(1){
         display: none;
     }
-
+    #group_5 > div:nth-child(1) >img{
+        width: 100%;
+        height: auto;
+    }
     #group_5 > div:nth-child(2) {
         width: 290px;
         height: 310px;
         position: absolute;
-        top: 126px;
-        left: 728px;
+        top: 254px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    #group_5 > div > div {
+    #group_5 > div:nth-child(2) > div {
         width: 250px;
         height: auto;
         margin: 0 auto;
@@ -366,42 +395,18 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        border: 2px solid #c02323;
+        background-color: #c02323;
         line-height: 58px;
         transition-duration: .4s;
     }
-    #group_5 > div:nth-child(2) > #group_5_view:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #c02323;
-        transform-origin: right;
-        transition: transform 0.5s ease;
-        transform: scaleX(0);
-        z-index: -1;
-    }
-    #group_5 > div:nth-child(2) > #group_5_view:hover{
-        border: 1px solid #fdfdfd;
-    }
-    #group_5 > div:nth-child(2) > #group_5_view:hover a {
-        color: #fdfdfd;
-    }
-    #group_5 > div:nth-child(2) > #group_5_view:hover:before {
-        transform-origin: left;
-        transition: transform 0.5s ease;
-        transform: scaleX(1);
-    }
     #group_5 > div:nth-child(2) > #group_5_view > a {
-        color: #c02323;
+        color: #fdfdfd;
         font-size: 16px;
     }
     /*6. group_5 메뉴 끝*/
     /*7. group_6 시작*/
     #group_6 {
-        height: 440px;
+        height: 300px;
         background-color: royalblue;
         background-image: url(../group_6/group_6_bg.jpg);
         background-position: center;
@@ -409,8 +414,8 @@
         background-size: cover;
     }
     #group_6 > div {
-        width: 400px;
-        height: 324px;
+        width: 325px;
+        height: 262px;
         background-color: #fdfdfd;
         position: absolute;
         top: 50%;
@@ -421,8 +426,8 @@
     #group_6 > div:before {
         content: '';
         display: block;
-        width: 380px;
-        height: 304px;
+        width: 300px;
+        height: 237px;
         border: 2px solid #24292d;
         position: absolute;
         top: 50%;
@@ -435,12 +440,12 @@
         width: 180px;
         height: auto;
         position: absolute;
-        top: 50px;
+        top: 40px;
         left: 50%;
         transform: translateX(-50%);
     }
     #group_6 > div > ul:nth-child(2) {
-        top: 174px;
+        top: 130px;
     }
     #group_6 > div > ul > li:nth-child(1) {
         width: 118px;
@@ -490,12 +495,16 @@
     }
     footer > ul {
         width: 100%;
+        box-sizing: border-box;
         height: 70px;
         background-color: #1f2427;
         position: absolute;
         bottom: 0;
+        font-size: 14px;
         text-align: center;
-        line-height: 50px;
+        line-height: 22px;
+        padding: 10px 0;
+        box-sizing: border-box;
     }
     footer > ul > li {
         color: #fdfdfd;
